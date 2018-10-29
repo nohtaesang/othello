@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* frame */
+#main-frame{
+    position: absolute;
+    background: white;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0
+}
+
+
+
+/* frame -> game */
+
+.game{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+
+
+/* frame -> game -> player-frame */
+.player-frame{
+    display: flex;
+    width:100%;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.player-frame .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    width:150px;
+    height:150px;
+    border-radius: 50%;    
+}
+.player-frame.black .profile{
+    border:5px solid black;
+    background: black;
+    color:white;
+}
+.player-frame.white .profile{
+    border:5px solid black;
+    background:white;
+    color:black;
+    border-radius: 50%;
+}
+
+.player-frame .profile.turn{
+    border: 5px solid pink;
+}
+
+.score{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* frame -> game -> board-frame */
+
+.board-frame{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;    
+    height:100%
+}
+
+/* frame -> game -> board-frame ->board */
+
+.board{
+    display: flex;
+    flex-direction:column;
+
+}
+
+.board .row{
+    display: flex;
+}
+
+.board .square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height:40px;
+    margin:1px;
+    background-color: white;
+    border:1px solid black;
+}
+.board .square .black{
+    width:80%;
+    height:80%;
+    border-radius: 50%;
+    background-color: black;
+
+}
+
+
+.board .square .white{
+    width:80%;
+    height:80%;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+
+}
+
+.board .square .possible{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    border:2px solid pink;
+    animation-timing-function: linear;
+    opacity: 0.9;
+    
+}
+
+.board .square .black.possible{
+    animation-name:black-to-white;
+    background:white;
+}
+
+.board .square .white.possible{
+    animation-name:white-to-black;
+    background:black;
+}
+
+@keyframes black-to-white{
+    from{background:black}
+    to{background:white}
+}
+@keyframes white-to-black{
+    from{background:white}
+    to{background:black}
+}
+
+.square .empty.possible{
+    animation-name:empty-possible;
+    animation-duration: 0.5s;
+    width:10px;
+    height:10px;
+    opacity: 1;
+    border:2px solid pink;
+}
+@keyframes empty-possible{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
