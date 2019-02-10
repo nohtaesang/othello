@@ -4,6 +4,11 @@
 ## Motivation
 react를 사용하여 프로젝트를 해보고 싶었다. 규칙이 복잡하지 않으면서도 재미있는 Othello로 게임을 대상으로 정했다.
 
+## Tech/framework used
+```
+react
+```
+
 ## Installation
 ```
 git clone https://github.com/nohtaesang/othello.git
@@ -20,9 +25,3 @@ npm start
 
 3. 클릭을 하면 돌의 색이 바뀌고, 소유한 돌의 개수가 변경된다. 그리고 백의 차례로 변경된다.
 <img width="1073" alt="3" src="https://user-images.githubusercontent.com/31440203/52530395-52b50100-2d48-11e9-9a30-6572e4d1980a.png">
-
-## Tech/framework used
-```
-react
-```
- 
