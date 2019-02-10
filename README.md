@@ -4,6 +4,12 @@
 ## Motivation
 react를 사용하여 프로젝트를 해보고 싶었다. 규칙이 복잡하지 않으면서도 재미있는 Othello로 게임을 대상으로 정했다.
 
+## Installation
+git clone https://github.com/nohtaesang/othello.git
+cd othello
+npm install
+npm start
+
 ## Screenshots
 
 ## Tech/framework used
